@@ -132,6 +132,10 @@ function animation() {
 	}, 1000/fps);		
 }
 
+function isIntersect(point, circle) {
+	return Math.sqrt((point.mx-circle.x) * (point.mx - circle.x) + (point.my - circle.y) * (point.my - circle.y)) < circle.r;
+}
+
 //when mouse is clicked in canvas, open edit modal
 canvas.addEventListener("mousedown", function(e) {
 	var rect = canvas.getBoundingClientRect();
