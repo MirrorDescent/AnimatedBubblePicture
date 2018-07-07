@@ -14,7 +14,7 @@ var foregroundColor = "#99CCF9";
 var inEdit = false;
 
 //audio array containing all chimes used currently
-var audio = [new Audio("media/audio/chimeOne.wav"),new Audio("media/audio/chimeTwo.wav"),new Audio("media/audio/chimeThree.wav"), new Audio("media/audio/chimeFour.wav"), new Audio("media/audio/chimeFive.wav"), new Audio("media/audio/chimeSix.wav"), new Audio("media/audio/chimeSeven.wav")]
+var audio = [new Howl({src:"media/audio/chimeOne.wav"}),new Howl({src:"media/audio/chimeTwo.wav"}),new Howl({src:"media/audio/chimeThree.wav"}), new Howl({src:"media/audio/chimeFour.wav"}), new Howl({src:"media/audio/chimeFive.wav"}), new Howl({src:"media/audio/chimeSix.wav"}), new Howl({src:"media/audio/chimeSeven.wav"})]
 
 //list of bubbles to display in bubble picture
 var bubbles = new Array();
@@ -118,7 +118,7 @@ function animation() {
         if(!inEdit) {
             //plays audio when hitting edges of container
             if(bubbles[i].containerBounce(container.height, container.width, container.x, container.y)){
-                bubbles[i].audio.volume = bubbles[i].getVolume();
+                bubbles[i].audio.volume(bubbles[i].getVolume());
                 bubbles[i].audio.play();
             }
             else{
