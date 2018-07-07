@@ -1,0 +1,82 @@
+/* global definitions */
+
+/* colours */
+$brand-primary:	#00D1C6;
+$brand-secondary:#FFFFFF;
+$brand-button-hover: #FFC0CB;
+
+/* link formatting */
+$default-link: $brand-primary;
+
+/* fonts */
+$font-size-base:1rem;
+$font-size-xxl:1.6rem;
+$font-size-xl:1.4rem;
+$font-size-lg:1.2rem;
+$font-size-sm:	0.8rem;
+$font-size-xs:	0.6rem;
+$font-family: 'Montserrat', sans-serif;;
+
+/* container size */
+$breakpoint-lg:	1200px;
+$breakpoint-md:	992px;
+$breakpoint-sm:	768px;
+$breakpoint-xs: 576px;
+
+/* borders */
+$border-primary:3px solid;
+
+$screen-width:100vw;
+$screen-height:100vh;
+@media all and (orientation:landscape) and (min-width:$breakpoint-lg){
+	$screen-width:$breakpoint-lg;
+	font-size:14pt;
+}
+@media all and (orientation:landscape) and (min-width:$breakpoint-md) and (max-width:$breakpoint-lg - 1){
+	$screen-width:$breakpoint-md;
+	font-size:12pt;
+}
+@media all and (orientation:landscape) and (min-width:$breakpoint-sm) and (max-width:$breakpoint-md - 1){
+	$screen-width:$breakpoint-sm;
+	font-size:10pt;
+}
+@media all and (orientation:landscape) and (min-width:$breakpoint-xs) and (max-width:$breakpoint-sm - 1){
+	$screen-width:$breakpoint-xs;
+	font-size:8pt;
+}
+@media all and (orientation:portrait) and (max-width:$breakpoint-xs){
+	font-size:8pt;
+	$header-height:50px;
+}
+
+$main-width: ($screen-width * 0.995);
+$main-height: ($screen-height * 0.97);
+$main-padding:($screen-width * 0.005);
+$header-height: ($screen-height * 0.1);
+$content-height: (($main-height * 0.99) - $header-height);
+
+$icon-button-height: $main-height * 0.03;
+$button-height: $main-height * 0.05;
+
+$intro-width: ($main-width * 0.5);
+$picPanel-width:($main-width * 0.5);
+$tile-width:($main-width * 0.2);
+$tile-height:($content-height * 0.4);
+$tile-margin:($main-width * 0.05);
+$footer-height: ($main-height * 0.1);
+/*remove these */
+$portrait-content-height:($main-height - $header-height);
+$content-panel-width:($main-width * 0.5);
+/*remove these */
+$modal-width:($main-width * 0.6);
+$modal-height:($main-height * 0.9);
+
+/* sass source */
+@import 'components/button';
+@import 'components/collab';
+@import 'components/header';
+@import 'components/modal';
+@import 'components/styles';
+@import 'components/editPanel';
+/*@import 'components/editPanel';*/
+

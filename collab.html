@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Collaboration</title>
+		<!-- responsive meta tag -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+	</head>
+	<body>
+		<div class="w3-panel header">
+			Collective Thoughts Animation
+		</div>
+		<div class="w3-panel content collab-content">
+			<div id="pictureContainer" class="w3-panel full-content-height bubblePic">
+				<!-- Canvas and image created for bubble animation-->
+				<canvas id="testCanvas" class="full-content-height centred-canvas"></canvas>
+				<img class="collab_art" id="art" src="media/images/Gry-Icon.png"></img>
+			</div>
+		</div>	
+		
+		<div id="myModal" class="modal">
+			<!--Modal Container-->
+			<div class="modal_container">
+				<!--Modal Header-->
+				<div class="modal_header align-center text-white ">
+					<!--When user clicks X it closes the modal-->
+					<span class="modal_close" onclick="closeModal()">&times;</span>
+				</div>
+				<!--Modal Body-->
+				<div class="modal_body align-center">
+					<div class="w3-half" id="editPanel">
+						<h6 class="selectedWord" id="editHeading"></h6>
+						<span>Change bubble size:</span>
+						<div class="changeCloud">
+							<input type="range" min="10" max="100" value="10" class="editPanel-slider" id="sizeRange">
+						</div>
+						<span>Foreground Colour:</span>
+                        <div class="editPanel-colour" id="overlay-colour">
+						  <input type="color" id="fgColour" class="fgColour">
+                        </div>
+					</div>
+					<div class="w3-half">
+						<img src="media/images/Gry-Icon.png" class="modal_image" id="snapshotImg">
+                    </div>
+					<div class="small-button" onclick="downloadSnapshot()">Download snapshot</div>
+				</div>
+				<!--Modal Footer-->
+				<div class="align-center text-white modal_footer"></div>
+			</div>
+		</div>
+
+		
+		<!--Object javascript file-->
+		<script src="scripts/bubble.js"></script>
+		<!--Animation javascript file-->
+		<script src="scripts/collab.js"></script>
+	</body>
+</html>

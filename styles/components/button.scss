@@ -1,0 +1,66 @@
+.button-holder{
+	background-color:$brand-secondary;
+	width:$main-width;
+	height:$button-height;
+}
+.rt-button{
+    border-style: solid;
+    border-width: 1px;
+    background-color: $brand-primary;
+    text-decoration: none;
+    color: $brand-secondary;
+    cursor: pointer;
+    border-radius: 5px;
+    height: $button-height;
+	width:($main-width * 0.95);
+	margin:0;
+	&-rating{
+		@media all and (orientation:landscape) and (min-width:$breakpoint-xs){
+			width:($main-width * 0.3);
+			margin:10px;
+		}
+		display:block;
+	}
+	&-textToSpeech{
+		width:($main-width * 0.15);
+	}
+	@media all and (orientation:landscape) and (min-width:$breakpoint-xs){
+		&-half{
+			width:($main-width * 0.46);
+		}
+		&-third{
+			width:($main-width * 0.3);
+		}
+	}
+
+}
+
+.small-button {
+    background-color: $brand-primary;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	cursor: pointer;
+	transition: 0.6s ease;
+	 -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+	
+	&:hover {
+		background-color: $brand-button-hover;
+	}
+}
+
+.rt-button:hover{
+    background-color: $brand-button-hover;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}

@@ -1,0 +1,39 @@
+audio {
+	display: none;
+}
+.collab_art {
+	display: none;
+	margin-top:0px;
+	padding-top:0px;
+	max-height: $content-height - $button-height;
+	max-width:$main-width * 0.7;
+}
+
+.full-content-height{
+	margin-top:0px;
+	padding-top:0px;
+	height:$content-height - $button-height;
+	max-width:$main-width;
+	max-height:$content-height - $button-height;
+	margin-left:auto;
+	margin-right:auto;
+    
+    @media all and (orientation:portrait) and (max-width:$breakpoint-sm){
+        margin-left: 0;
+        margin-right: 0;
+        float: left
+    }
+}
+
+.bubblePic{
+	margin-top:0px;
+	padding-top:0px;
+	height:$content-height - $button-height;
+	max-width:$main-width * 0.7;
+	max-height:$content-height - $button-height;
+	/*float:right;*/
+}
+
+.collab-content{
+	background-color:#E43012;
+}
